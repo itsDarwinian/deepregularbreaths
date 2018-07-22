@@ -17,7 +17,8 @@ body {
 }
 
 #preview {
-  display:none;
+  height:0;
+  width:0;
 } /*Preview est l'image qui s'affichera si des gens partagent le site via facebook*/
 
 /*PRELOADER*/
@@ -278,8 +279,9 @@ a#down img {
 #mainpage {
   background-color: #111;
   width : 100%;
-  height : 2200px;
-  margin-top:-50px;
+  /*height : 2200px;*/
+  padding-bottom : 150px;
+  margin-top:-80px;
   padding-top : 100px;
 }
 
@@ -401,41 +403,43 @@ div#conclusion {
 
 div#conclusion img {
   float: left;
-  margin-bottom : 180px;
+  margin-bottom : 80px;
   margin-right : 50px;
 }
 
-div#conclusion div.columnwrapper {
-  /*float: left;*/
-  /*width : calc(100% - 288 + 50);*/
+/*bouton informer*/
+div#follow {
+  width:100%;
+  margin : auto;
 }
 
-/*bouton informer*/
-div#conclusion button {
+div#follow button {
   background-color : #222;
   border: none;
-  /*color : #57b9f2;*/
-  padding : 20px 40px;
-  margin-top : 75px;
-  /*font-size: 14pt;*/
+  padding : 20px 60px;
+  width : 100%;
+  margin-top : 150px;
   transition : all 0.5s;
 }
 
-div#conclusion button:hover {
-  background-color : #555;
+div#follow button:hover {
+  background-color : #333;
 }
 
-div#conclusion button:active {
+div#follow button:active {
   background-color : #000;
 }
 
-div#conclusion button + p {
+div#follow button + p {
   font-size: 11pt;
   color : #AAA;
   margin-bottom : 35px;
   margin-left : 5px;
-  margin-top:5px;
-  width : 300px;
+  margin-top : 5px;
+}
+
+p#followtext {
+  text-align: right;
 }
 
 /*div du formulaire en dialogbox*/
