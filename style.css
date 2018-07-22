@@ -258,7 +258,7 @@ a#down:hover img {
   transform: rotate(135deg);
   width : 79px;
   margin-left : 15px;
-  margin-top : 15px;;
+  margin-top : 15px;
   }
 }
 
@@ -403,6 +403,64 @@ div#conclusion img {
   float: left;
   margin-bottom : 180px;
   margin-right : 50px;
+}
+
+div#conclusion button {
+  background-color : #222;
+  border: none;
+  padding : 10px 20px;
+  margin-top : 5px;
+  font-size: 14pt;
+}
+
+div#conclusion button:hover {
+  background-color : #555;
+}
+
+div#conclusion button:active {
+  background-color : #000;
+}
+
+div#conclusion button + p {
+  font-size: 11pt;
+  color : #AAA;
+}
+
+div#gform {
+  position:fixed;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  background-color: #00000066;
+}
+
+div#gform iframe{
+  /*position : absolute;*/
+  /*clip-path: inset(1600px, 0px, 0px, 0px);*/
+  overflow:hidden;
+  /*top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);*/
+}
+
+div#gform iframe::before{
+  content:""
+  position : absolute;
+  width : 350px;
+  height : 500px;
+  overflow:hidden;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+/*bidouillage du formulaire google*/
+.freebirdFormviewerViewFormCard:first-of-type {
+    font-family: 'Rubik';
+}
+
+.freebirdFormviewerViewHeaderTitle.exportFormTitle.freebirdCustomFont {
+    font-size: 18pt;
 }
 
 /*FOOTER*/
