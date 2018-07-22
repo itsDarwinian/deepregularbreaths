@@ -76,8 +76,8 @@ $(window).load(function() {
 $(document).ready(function() {
   $('#informbutton').on('click', function(){ // Au clic sur <a id="close">
     console.log("t'as cliqué là, nan ?"); //debugging
-    var element = document.getElementById("gform"); // On enregistre <div id="gform">
-    element.classList.remove( 'hidden' ); // On lui ajoute la classe hidden
+    document.getElementById("gformwrapper").classList.remove( 'hidden' ); // On lui ajoute la classe hidden
+    document.getElementById("informbutton").classList.add( 'hidden' ); // On lui ajoute la classe hidden
   });
 });
 
@@ -85,15 +85,15 @@ $(document).ready(function() {
 $(document).ready(function() {
   $('#close').on('click', function(){ // Au clic sur <a id="close">
     console.log("t'as cliqué là, nan ?"); //debugging
-    var element = document.getElementById("gform"); // On enregistre <div id="gform">
-    element.classList.add( 'hidden' ); // On lui ajoute la classe hidden
+    document.getElementById("gformwrapper").classList.add( 'hidden' );
+    document.getElementById("informbutton").classList.remove( 'hidden' ); // On lui ajoute la classe hidden
   });
 });
 
-$(document).ready(function() {
-  $('#gform').on('click', function(){ // Au clic sur <a id="close">
+/*$(document).ready(function() {
+  $('#gform').on('click', function(){ // Au clic sur <a id="gform">
     console.log("t'as cliqué là, nan ?"); //debugging
     var element = document.getElementById("gform"); // On enregistre <div id="gform">
     element.classList.add( 'hidden' ); // On lui ajoute la classe hidden
   });
-});
+});*/

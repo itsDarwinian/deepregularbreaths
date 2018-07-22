@@ -409,7 +409,9 @@ div#conclusion img {
 
 /*bouton informer*/
 div#follow {
-  width:100%;
+  width:620px;
+  padding-top:150px;
+  min-height: 200px;
   margin : auto;
 }
 
@@ -418,7 +420,7 @@ div#follow button {
   border: none;
   padding : 20px 60px;
   width : 100%;
-  margin-top : 150px;
+  /*margin-top : 150px;*/
   transition : all 0.5s;
 }
 
@@ -430,7 +432,7 @@ div#follow button:active {
   background-color : #000;
 }
 
-div#follow button + p {
+div#follow #gformwrapper + p {
   font-size: 11pt;
   color : #AAA;
   margin-bottom : 35px;
@@ -443,7 +445,7 @@ p#followtext {
 }
 
 /*div du formulaire en dialogbox*/
-div#gform {
+/*div#gform {
   position:fixed;
   opacity:1;
   top:0;
@@ -453,29 +455,28 @@ div#gform {
   background-color: #00000066;
   z-index : 15;
   transition : all 0.5s ease;
-}
+} OLD CODE*/
 
-div#gform.hidden {
+.hidden { /*Est ajoutée à des éléments par du javascript*/
   opacity:0;
-  display:none;
-  transition : all 0.5s ease;
+  /*display:none;*/
+  transition : all 0.5s ease!important;
+  height:0px!important;
+  padding:0!important;
 }
 
-div#gform .wrapper{
-  position : absolute;
+div#gformwrapper{
   width : 620px;
   height : 390px;
+  margin-top: -12px;
   overflow:hidden;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-top: solid 8px #333;
+  border-top: solid 13px #222;
 }
 
-div#gform iframe{
+div#gformwrapper iframe{
   overflow:hidden;
-  margin-top:-457px;
+  margin-top:-450px;
   margin-left:-35px;
 }
 
@@ -483,11 +484,13 @@ div#gform iframe{
 
 .close {
   position: absolute;
-  right: 26px;
-  top: 13px;
+  display:block;
+  margin-left : 568px;
+  margin-top: 13px;
   width: 26px;
   height: 26px;
   opacity: 0.3;
+  /*z-index: 15;*/
 }
 .close:hover {
   opacity: 1;
