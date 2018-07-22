@@ -19,43 +19,43 @@ var ScrollDetector = function()
         } else {
             document.body.classList.remove( 'scrolled' );
         }
-        if( window.scrollY > 200)
+        if( window.scrollY > 300)
         {
             document.body.classList.add( 'scrolled1' );
         } else {
             document.body.classList.remove( 'scrolled1' );
         }
-        if( window.scrollY > 400)
+        if( window.scrollY > 500)
         {
             document.body.classList.add( 'scrolled2' );
         } else {
             document.body.classList.remove( 'scrolled2' );
         }
-        if( window.scrollY > 600)
+        if( window.scrollY > 700)
         {
             document.body.classList.add( 'scrolled3' );
         } else {
             document.body.classList.remove( 'scrolled3' );
         }
-        if( window.scrollY > 800)
+        if( window.scrollY > 900)
         {
             document.body.classList.add( 'scrolled4' );
         } else {
             document.body.classList.remove( 'scrolled4' );
         }
-        if( window.scrollY > 1000)
+        if( window.scrollY > 1100)
         {
             document.body.classList.add( 'scrolled5' );
         } else {
             document.body.classList.remove( 'scrolled5' );
         }
-        if( window.scrollY > 1200)
+        if( window.scrollY > 1300)
         {
             document.body.classList.add( 'scrolled6' );
         } else {
             document.body.classList.remove( 'scrolled6' );
         }
-        if( window.scrollY > 1400)
+        if( window.scrollY > 1500)
         {
             document.body.classList.add( 'scrolled7' );
         } else {

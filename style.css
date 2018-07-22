@@ -13,12 +13,14 @@ html {
 body {
   background-image : url(img/bg.jpg);
   background-attachment: fixed;
+  background-size: contain;
   height : 100%;
 }
 
 #preview {
   height:0;
   width:0;
+  display : none ;
 } /*Preview est l'image qui s'affichera si des gens partagent le site via facebook*/
 
 /*PRELOADER*/
@@ -283,6 +285,42 @@ a#down img {
   padding-bottom : 150px;
   margin-top:-80px;
   padding-top : 100px;
+}
+
+.playtestannounce {
+  width : 890px;
+  margin : auto;
+  padding : 25px 30px;
+  margin-bottom : 100px;
+  border : solid 2px #57b9f2;
+  margin-top : 50px;
+  overflow: auto;
+}
+
+.playtestannounce p {
+  font-size:12pt;
+}
+
+.emphasized {
+  color : #57b9f2;
+  font-size:12pt;
+}
+
+.playtestannounce a {
+  font-size : 12pt;
+  display:block;
+  color:#DDD;
+  width : 230px;
+  background-color: #57b9f2;
+  padding : 10px 20px;
+  float:right;
+  transition : all 0.5s;
+  margin-top:15px;
+  margin-left : 15px;
+}
+
+.playtestannounce a:hover {
+  color : #57b9f2;
 }
 
 .column{
