@@ -1,5 +1,6 @@
 $(document).ready(function() {
 $('#down').on('click', function() { // Au clic sur un élément
+  console.log("t'as cliqué là, nan ?"); //debugging
   var page = $(this).attr('href'); // Page cible
   var speed = 750; // Durée de l'animation (en ms)
   $('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
@@ -66,9 +67,33 @@ var ScrollDetector = function()
 new ScrollDetector();
 
 /*PRELOADER*/
-//paste this code under the head tag or in a separate js file.
-	// Wait for window load
-	$(window).load(function() {
-		// Animate loader off screen
-		$(".se-pre-con").fadeOut(1500);;
-	});
+$(window).load(function() {
+	$(".se-pre-con").fadeOut(1500);
+  console.log("la page a fini de charger, nan ?"); //debugging
+});
+
+/*SHOW ACTION du gform*/
+$(document).ready(function() {
+  $('#informbutton').on('click', function(){ // Au clic sur <a id="close">
+    console.log("t'as cliqué là, nan ?"); //debugging
+    var element = document.getElementById("gform"); // On enregistre <div id="gform">
+    element.classList.remove( 'hidden' ); // On lui ajoute la classe hidden
+  });
+});
+
+/*CLOSE ACTION du gform*/
+$(document).ready(function() {
+  $('#close').on('click', function(){ // Au clic sur <a id="close">
+    console.log("t'as cliqué là, nan ?"); //debugging
+    var element = document.getElementById("gform"); // On enregistre <div id="gform">
+    element.classList.add( 'hidden' ); // On lui ajoute la classe hidden
+  });
+});
+
+$(document).ready(function() {
+  $('#gform').on('click', function(){ // Au clic sur <a id="close">
+    console.log("t'as cliqué là, nan ?"); //debugging
+    var element = document.getElementById("gform"); // On enregistre <div id="gform">
+    element.classList.add( 'hidden' ); // On lui ajoute la classe hidden
+  });
+});

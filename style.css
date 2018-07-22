@@ -405,12 +405,20 @@ div#conclusion img {
   margin-right : 50px;
 }
 
+div#conclusion div.columnwrapper {
+  /*float: left;*/
+  /*width : calc(100% - 288 + 50);*/
+}
+
+/*bouton informer*/
 div#conclusion button {
   background-color : #222;
   border: none;
-  padding : 10px 20px;
-  margin-top : 5px;
-  font-size: 14pt;
+  /*color : #57b9f2;*/
+  padding : 20px 40px;
+  margin-top : 75px;
+  /*font-size: 14pt;*/
+  transition : all 0.5s;
 }
 
 div#conclusion button:hover {
@@ -424,43 +432,75 @@ div#conclusion button:active {
 div#conclusion button + p {
   font-size: 11pt;
   color : #AAA;
+  margin-bottom : 35px;
+  margin-left : 5px;
+  margin-top:5px;
+  width : 300px;
 }
 
+/*div du formulaire en dialogbox*/
 div#gform {
   position:fixed;
+  opacity:1;
   top:0;
   left:0;
   height:100%;
   width:100%;
   background-color: #00000066;
+  z-index : 15;
+  transition : all 0.5s ease;
 }
 
-div#gform iframe{
-  /*position : absolute;*/
-  /*clip-path: inset(1600px, 0px, 0px, 0px);*/
-  overflow:hidden;
-  /*top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);*/
+div#gform.hidden {
+  opacity:0;
+  display:none;
+  transition : all 0.5s ease;
 }
 
-div#gform iframe::before{
-  content:""
+div#gform .wrapper{
   position : absolute;
-  width : 350px;
-  height : 500px;
+  width : 620px;
+  height : 390px;
   overflow:hidden;
   top:50%;
   left:50%;
   transform: translate(-50%,-50%);
-}
-/*bidouillage du formulaire google*/
-.freebirdFormviewerViewFormCard:first-of-type {
-    font-family: 'Rubik';
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-top: solid 8px #333;
 }
 
-.freebirdFormviewerViewHeaderTitle.exportFormTitle.freebirdCustomFont {
-    font-size: 18pt;
+div#gform iframe{
+  overflow:hidden;
+  margin-top:-457px;
+  margin-left:-35px;
+}
+
+/*BUTTON CLOSE*/
+
+.close {
+  position: absolute;
+  right: 26px;
+  top: 13px;
+  width: 26px;
+  height: 26px;
+  opacity: 0.3;
+}
+.close:hover {
+  opacity: 1;
+}
+.close::before, .close::after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 26px;
+  width: 2px;
+  background-color: #333;
+}
+.close::before {
+  transform: rotate(45deg);
+}
+.close::after {
+  transform: rotate(-45deg);
 }
 
 /*FOOTER*/
