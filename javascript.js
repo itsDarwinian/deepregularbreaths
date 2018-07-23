@@ -90,6 +90,22 @@ $(document).ready(function() {
   });
 });
 
+$(document).ready(function() {
+  $('.dlbutton').on('click', function(){ // Au clic sur <a id="close">
+    console.log("t'as cliqué là, nan ?"); //debugging
+    $(".dlbutton").addClass( 'hidden' );
+    document.getElementById("CLUF").classList.remove( 'hidden' ); // On lui ajoute la classe hidden
+  });
+});
+
+$(document).ready(function() {
+  $('#CLUF a').on('click', function(){ // Au clic sur <a id="close">
+    console.log("t'as cliqué là, nan ?"); //debugging
+    $(".dlbutton").removeClass( 'hidden' );
+    document.getElementById("CLUF").classList.add( 'hidden' ); // On lui ajoute la classe hidden
+  });
+});
+
 /*$(document).ready(function() {
   $('#gform').on('click', function(){ // Au clic sur <a id="gform">
     console.log("t'as cliqué là, nan ?"); //debugging

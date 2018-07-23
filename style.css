@@ -294,7 +294,7 @@ a#down img {
   margin-bottom : 100px;
   border : solid 2px #57b9f2;
   margin-top : 50px;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .playtestannounce p {
@@ -321,6 +321,22 @@ a#down img {
 
 .playtestannounce a:hover {
   color : #57b9f2;
+}
+
+#CLUF {
+  background-color: #FFF;
+  width:850px;
+  margin-top: 15px;
+  padding : 20px 20px;
+  overflow : hidden;
+}
+
+#CLUF p{
+  color : #333;
+}
+
+#CLUF a{
+  float:right;
 }
 
 .column{
@@ -498,6 +514,7 @@ p#followtext {
 .hidden { /*Est ajoutée à des éléments par du javascript*/
   opacity:0;
   /*display:none;*/
+  visibility : hidden;
   transition : all 0.5s ease!important;
   height:0px!important;
   padding:0!important;
