@@ -17,6 +17,10 @@ body {
   height : 100%;
 }
 
+h2 {
+  /*text-transform: uppercase;*/
+}
+
 #preview {
   height:0;
   width:0;
@@ -292,7 +296,7 @@ a#down img {
   margin : auto;
   padding : 25px 30px;
   margin-bottom : 100px;
-  border : solid 2px #57b9f2;
+  border : dashed 2px #57b9f2;
   margin-top : 50px;
   overflow: hidden;
 }
@@ -311,7 +315,7 @@ a#down img {
   display:block;
   color:#DDD;
   width : 230px;
-  background-color: #57b9f2;
+  background-color: #57b9f233;
   padding : 10px 20px;
   float:right;
   transition : all 0.5s;
@@ -321,6 +325,7 @@ a#down img {
 
 .playtestannounce a:hover {
   color : #57b9f2;
+  background-color : #FFFFFF00;
 }
 
 #CLUF {
@@ -335,8 +340,34 @@ a#down img {
   color : #333;
 }
 
+#CLUF h3{
+  font-weight: normal;
+  color : #555;
+}
+
 #CLUF a{
   float:right;
+  text-transform:uppercase;
+  text-decoration: none;
+  color:#FFF;
+  width : 150px;
+  text-align: center;
+  font-weight: bold;
+  background-color: #57b9f2;
+  /*background-color : #AAA;*/
+}
+
+#CLUF a#deny{
+  background-color : #AAA;
+}
+
+#CLUF a:hover{
+  background-color : #FFF;
+  color : #57b9f2;
+}
+
+#CLUF a#deny:hover{
+  background-color : #FFF;
 }
 
 .column{
