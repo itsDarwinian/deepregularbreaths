@@ -120,26 +120,24 @@ div#socialbar {
 }
 
 a#FB {
-  display:block;
+  display:inline-block;
+  vertical-align: middle;
   background-image : url(img/fb_icon.png);
   background-size:contain;
   margin-left : 15px;
-  margin-top : -2px;
   height : 25px;
   width : 25px;
-  float : right;
 }
 a#TWITTER {
-  display:block;
+  display:inline-block;
+  vertical-align: middle;
   background-image : url(img/twitter_icon.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size:contain;
   margin-left : 15px;
-  margin-top : -2px;
   height : 25px;
   width : 25px;
-  float : right;
 }
 
 #intro {
@@ -403,6 +401,12 @@ div#conclusion img {
   float: left;
   margin-bottom : 180px;
   margin-right : 50px;
+}
+
+div#conclusion a {
+  display : block;
+  float : right;
+  margin-top: 10px;
 }
 
 /*FOOTER*/
