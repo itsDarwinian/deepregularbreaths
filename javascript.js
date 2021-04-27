@@ -69,6 +69,22 @@ new ScrollDetector();
 //paste this code under the head tag or in a separate js file.
 	// Wait for window load
 	$(window).load(function() {
+    var elements = document.querySelectorAll('.page');
+    for(var i=0; i<elements.length; i++){
+      elements[i].style.display = 'none';
+    }
 		// Animate loader off screen
 		$(".se-pre-con").fadeOut(1500);;
+    document.getElementById('page1').style.display = 'block';
 	});
+
+var CurrentPage = 'page1';
+
+function movetoPage(n) {
+  if (n!=CurrentPage) {
+    console.log(n);
+    document.getElementById(n).style.display = 'block';
+    document.getElementById(CurrentPage).style.display = 'none';
+    CurrentPage = n;
+  }
+}
