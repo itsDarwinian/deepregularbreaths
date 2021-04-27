@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Journal de Bord 2 - Deep Regular Breaths</title>
+  <meta name="description" content="Deep Regular Breaths est un jeu de société de gestion en coopération, de confiance et de trahison. Et il est en cours de développement.">
+  <meta name="google-site-verification" content="K7tmQWqFbvmQOv6kQJ1Tk6w3tDrDHAY520HZ_8x4es4" />
+  <link rel="stylesheet" href="style2.css">
+  <link rel='stylesheet' media='screen and (max-width: 1200px)' href='medium2.css' />
+  <link rel="icon" href="img/favicon.ico" />
+  <link rel="icon" type="image/png" href="img/favicon.png" />
+  <link href="https://fonts.googleapis.com/css?family=Rubik:300,400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <h1>Journal de Bord</h1>
+  <h2><span><span id="date">08.10.20</span> <span id="num">2</span> Mécaniques</span></h2>
+
+  <div id="main">
+    <div id="mainrow">
+      <div id="playercolumn">
+        <div id="socialswrapper">
+          <img id="articleillus" src="img/JdB2_illus.png">
+          <img class="medium-only" id="articleillusmedium" src="img/JdB2_illus_medium.png">
+          <a href="http://deepregularbreaths.com" id="logo"></a>
+          <div id="socials">
+            —
+            <a id="facebookl" href="http://www.facebook.com/deepregularbreaths"></a>
+            <a id="twitterl" href="http://www.twitter.com/DRBGame"></a>
+            <!--<a id="instagraml" href="http://www.instagram.com/deepregularbreaths"></a>-->
+            —
+          </div>
+        </div>
+      </div>
+      <div id="contentcolumn"><p class="intro">La première entrée du journal de bord était il y a près d’un an. La seconde arrive seulement aujourd’hui mais d’autres sont à venir sous peu. Même si les journaux de bord seront maintenant disponibles en texte, mais sans l’audio, leur contenu reste sensiblement le même : aborder le développement de Deep Regular Breaths et ce que j’apprends.</p>
+
+<p>Avant de parler plus en détail des derniers développements de Deep Regular Breaths, je dois quand même poser des bases qui n’étaient pas encore posées : ce qu'est Deep Regular Breaths.
+Deep Regular Breaths est un jeu de deckbuilding à rôle secret dans lequel les joueurs cherchent à progresser dans une enquête.</p>
+
+<p>L'idée d'origine, c'était un système de deckbuilding en coopération avec un accent sur l'individualité.
+Chaque joueur incarnait un personnage avec des statistiques uniques et essayait de modifier le deck central pour favoriser l'accomplissement de ses propres actions.
+J'ai commencé à développer le jeu lorsque j'y ai ajouté l'idée des rôles secrets. Alors, sur le principe, DRB était : "toutes les actions des joueurs consomment directement de l'oxygène, ressource vitale et commune à tous."</p>
+
+<p>Même si le principe d'une réserve d'oxygène commune est toujours présent dans les dernières versions du jeu, des étapes intermédiaires sont apparues entre l'action d'un joueur et la dépense d'oxygène. Elles sont là pour favoriser le jeu de deckbuilding. Aujourd'hui, au lieu de puiser directement dans la réserve d'oxygène, les joueurs avancent dans une expédition dans le vaisseau et c'est seulement lorsque lorsque le groupe arrive à la fin de celle-ci que la jauge d'oxygène descend d'un cran. L'expédition est alors mélangée et une nouvelle expédition est constituée. C'est la réalisation que Deep Regular Breaths est un jeu de deckbuilding qui a motivé ce changement, autorisant ainsi des modifications du "deck" plus fréquentes, donnant aux joueurs des informations partielles sur les cartes et, enfin, créant l'espace nécessaire pour les synergies entre les cartes.</p>
+
+<p>J'ai toujours été attiré par les jeux de deckbuilding et je laisse régulièrement Slay The Spire engloutir quelques unes de mes soirées. Quelques principes de roguelike sont d'ailleurs descendus de là pour venir s'incruster dans DRB.</p>
+
+<p>Le deckbuilding est probablement l'un des genres qui repose le plus sur le contrôle exercé par le joueur sur le deck... Autrement dit, créer un environnement coopératif avec ces principes est la garantie d'activer les comportements de "meneur" qui ont tendance à teindre les jeux coopératifs d'un goût amer. C'est là que les mécaniques de rôle secret est, plus qu'un ajout thématique, une nécessité.</p>
+
+<p>J'ai toujours été attiré par les jeux à rôle secret. Ces jeux de bluff où les joueurs ont, parmi eux, un ou plusieurs joueurs qui jouent secrètement contre le reste du groupe. Avec le bon groupe, jouer à ce type de jeu permet de faire des crasses aux autres joueurs dans un environnement qui reste safe. Alors, les joueurs s'outragent en surjouant, pour rigoler. ça n'engage que moi mais, quand il s’agit juste de rigoler, je trouve ce genre très efficace ! C'est d’ailleurs beaucoup vers Secret Hitler que je me tourne, pour le côté rôle secret de DRB.</p>
+
+<p>Dans ses premières versions, DRB avait des mécaniques de rôle secret plutôt discrètes, dans la mesure où les joueurs n'étaient pas tenus à un rôle spécifique, mais avaient plutôt, en main, des cartes leur indiquant d'adopter un comportement spécifique (sans objectif à long terme). Forcément, ce système implique un flou autour de la responsabilité du joueur. Si, d'un côté, il permettait aux joueurs de voir leurs compagnons se comporter inexplicablement, il reposait trop lourdement sur la bonne foi du joueur.
+À ce moment, la solution était d'avoir un arbitre qui surveillait les cartes des joueurs pour valider leurs comportement. Avec le recul, c'était une erreur de game design. Petit à petit, le jeu a évolué de manière à garantir une certaine autonomie des joueurs. Aujourd'hui, il existe des secrets qui influent sur le comportement du joueur, mais c'est lors de l'activation que les autres joueurs peuvent se porter garants du bon comportement du joueur (dont dépend le déclenchement de son secret). Par exemple, il existe un secret qui se déclenche lorsque le palier 30% d'oxygène est terminé ET si le joueur n'a jamais adressé la parole au joueur à sa droite. </p>
+
+<p>L'objectif de DRB en tant que jeu à rôle secret, c'est donc de donner l'opportunité aux joueurs d'intriguer les uns contre les autres, mais aussi de leur donner une incitation à chercher à interpréter les actions des autres plutôt que les contrôler (pensez au joueur qui interrompt le tour d'un autre joueur en lui disant "non, tu peux faire ceci et cela, avec un meilleur résultat"). Au final, cette mécanique existe dans une forme simple : chaque joueur a une carte secret avec un objectif unique indiqué dessus. Les joueurs en coopérations ont un secret "motivation". Les joueurs qui jouent secrètement contre eux ont un secret "obsession".</p>
+
+<p>Enfin, le but du jeu a lui aussi connu ses évolutions. Si, au début, il était question de traverser un scénario, avec sa narration par un MJ, il a petit à petit évolué vers quelque chose qui garantit l'autonomie des joueurs, avec des cartes à lire. Enfin, l'objectif est devenu simplement d'atteindre la dernière case de la jauge d'enquête. Ce dernier changement a été motivé par plusieurs objectifs : raccourcir la durée des parties et créer de l'espace de conception pour des synergies. En l'occurrence, il s'agit des cartes permettant d'avancer de plusieurs cases à la fois, sur la jauge d'oxygène, si les bonnes conditions sont réunies.</p>
+
+<p>Autant pour les secrets que pour l'objectif du jeu, l'écriture du jeu a été petit à petit abandonnée pour essayer de favoriser une narration plus organique, faite par le sens que les joueurs attribuent à leurs actions et faite par l'interprétation que les joueurs font des actions des autres. J'aborderai les anciens et nouveaux principes de narration plus en détails dans un journal de bord prochain (qui portera sur les thèmes narratifs et esthétiques de DRB).</p>
+
+<p>Voilà qui devrait poser de bonnes bases pour ce qu'est DRB : un jeu de deckbuilding à rôle secret, qui divertit les joueurs à travers des choix d'optimisation et qui leur donne des opportunités de s'outrager les uns les autres.
+La plupart des joueurs cherchent à résoudre l'enquête mais certains d'entre eux doivent secrètement saboter le travail du groupe.
+Les joueurs choisissent chacun des salles que le groupe va parcourir dans le but d'optimiser les actions du groupe, mais il y a de grandes chances que certaines cartes peu désirées soient ajoutées ; outrageux donc.
+Chaque joueur a des capacités et des afflictions qu'il peut trier pour essayer d'optimiser ses actions (qui dépendent quand même des salles) vis à vis de son objectif.
+Grâce à leurs capacités, les joueurs essaient d'avancer dans l'enquête jusqu'à la compléter et ce avant que l'oxygène ne tombe à zéro... à moins qu'ils ne soient sabotés par les joueurs moins bien intentionnés parmi eux.</p>
+      </div>
+    </div>
+  </div>
+  <div id="last"><a href="journaldebord.html"><< 1. Print & Play et révisions</a><!--<a href="journaldebord3.html">3. Thèmes >></a>--></div>
+  <div id="footer">
+    <p id="maintext">Deep Regular Breaths est une &#339;uvre enregistrée auprès de l'Institut National de la Propriété Intellectuelle.</p>
+    <p>DSO2018008117 - 29/06/2018</p>
+    <p>Erwan Fons, tous droits réservés.</p>
+  </div>
+</body>
+</html>

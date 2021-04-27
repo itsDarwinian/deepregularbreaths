@@ -17,7 +17,12 @@ body {
   padding : 100px 0 0 0;
 }
 
+.medium-only {
+  display:none;
+}
+
 h1 {
+  padding-left : 40px;
   font-size : 32pt;
   letter-spacing: 40px;
   margin-bottom : 35px;
@@ -96,6 +101,13 @@ h2 span > span {
 
 iframe {
   margin-bottom : 30px;
+}
+
+#articleillus {
+  margin-bottom : 30px;
+  border-color: #666;
+  border-style:solid;
+  border-width: 1px;
 }
 
 #logo {
@@ -178,6 +190,33 @@ p {
   background-repeat: no-repeat;
   background-size: 120px;
   height : 250px;
+}
+
+#last a {
+  text-align: right;
+  display : block;
+  position : relative;
+  right : 50%;
+  margin-right : 100px;
+  top : 113px;
+  font-size : 12pt;
+  color : #AAA;
+}
+
+#last a:nth-child(2) {
+  text-align: left;
+  display : block;
+  position : relative;
+  left : 50%;
+  margin-left : 100px;
+  top : 94px;
+  font-size : 12pt;
+  color : #AAA;
+}
+
+#last a:hover {
+  text-decoration: none;
+  color : #FFF
 }
 
 /*FOOTER*/
