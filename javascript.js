@@ -76,15 +76,35 @@ new ScrollDetector();
 		// Animate loader off screen
 		$(".se-pre-con").fadeOut(1500);;
     document.getElementById('page1').style.display = 'block';
+
+    /*document.getElementById('nav').onmouseout = function(event) {
+      if (CurrentPage='page1'){
+        document.getElementById('nav').style.opacity=0;
+        console.log('mouseout '+event.target);
+      }
+    }
+
+    /*document.getElementById('nav').onmouseover = function(event) {
+      if (CurrentPage='page1'){
+        document.getElementById('nav').style.opacity=100;
+        console.log('mousein '+event.target)
+      }
+    }*/
 	});
 
-var CurrentPage = 'page1';
+var CurrentPage = 1;
 
-function movetoPage(n) {
-  if (n!=CurrentPage) {
-    console.log(n);
-    document.getElementById(n).style.display = 'block';
-    document.getElementById(CurrentPage).style.display = 'none';
-    CurrentPage = n;
+function movetoPage(nb) {
+  if (nb!=CurrentPage) {
+    //console.log(n);
+    document.getElementById('page'+nb).style.display = 'block';
+    document.getElementById('page'+CurrentPage).style.display = 'none';
+
+    document.getElementById('b'+nb).style.backgroundPosition='-17px';
+    document.getElementById('b'+CurrentPage).style.backgroundPosition='5px';
+
+    CurrentPage = nb;
+    document.getElementById('nav').style.opacity=100;
+
   }
 }

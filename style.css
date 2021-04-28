@@ -3,11 +3,21 @@
   margin:0;
   font-family: 'Rubik', sans-serif;
   color : #FFF;
-  font-size : 16pt;
+  font-size : 15pt;
 }
 
 html {
   height : 100%;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: #333;
+  background: white;
+}
+
+::selection {
+  color: #333;
+  background: white;
 }
 
 body {
@@ -102,14 +112,15 @@ body {
 	background-color: #111;
 }
 
-.nav {
+#nav {
   position : fixed;
   z-index: 5000;
   top : 36px;
   right : 44px;
+  opacity: 0;
 }
 
-.nav>button {
+#nav>button {
   cursor : pointer;
   background: inherit;
   border : none;
@@ -122,9 +133,9 @@ body {
   background-position: 5px;
 }
 
-.nav>button:hover {
-  background-position: -17px;
-}
+/*#nav>button:hover {
+  background-position: right;
+}*/
 
 .page {
   position: fixed;
@@ -137,31 +148,163 @@ body {
   /*les classes .page sont display:none après le chargement, dans le JS.*/
 }
 
+/*----PAGE 1----*/
+
 #page1 {
-  background-image : url(img/maquette1.png);
-  /*z-index:6000;*/
+  background-image : url(img/bg.png);
+  text-align: center;
+  vertical-align: middle;
 }
+
+#page1>#meridith {
+  z-index: -1;
+  height : 95%;
+  width : 445px;
+  position : fixed;
+  right : 50%;
+  bottom : 0px;
+  margin-right: 160px;
+  background-image: url("img/meridith.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  pointer-events: none;
+
+  -webkit-animation: 3.5s ease-out 0s travelup;
+          animation: 3.5s ease-out 0s travelup;
+}
+
+@-webkit-keyframes travelup {
+  from {background-position:bottom -50px center ; opacity:0;} to {background-position:center ; opacity:1;}
+}
+@keyframes travelup {
+  from {background-position:bottom -50px center ; opacity:0;} to {background-position:center ; opacity:1;}
+}
+
+#page1>.wrapper{
+  height : 100%;
+  width : 605px;
+  margin: auto;
+  background-image: url("img/logo2021.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  -webkit-animation: 2.5s linear 0s fadeIn;
+          animation: 2.5s linear 0s fadeIn;
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity:0} to {opacity:1}
+}
+@keyframes fadeIn {
+  from {opacity:0} to {opacity:1}
+}
+
+#page1>.wrapper>#intro-top-separator {
+  width : 457px;
+  height : 65%;
+  background-image: url("img/top-separator.png");
+  background-repeat: no-repeat;
+  background-position: 0% 8%;
+  background-size: contain;
+  margin: auto;
+}
+
+#page1>.wrapper>p {
+  width : 92%;
+  text-align: justify;
+  margin : auto;
+  height : 20%;
+  vertical-align: bottom;
+}
+
+#page1>.wrapper>#savoirplus {
+  border-radius: 14px;
+  background-color: white;
+  background-clip: content-box;
+  padding : 5px;
+  border : solid 1px white;
+  width : 230px;
+  height : 65px;
+
+  cursor : pointer;
+
+  font-size: 13pt;
+  text-transform: uppercase;
+  font-weight: bold;
+  color : #333;
+
+  margin:auto;
+
+  transition-duration : 0.3s;
+}
+
+#page1>.wrapper>#savoirplus:hover {
+  background : none;
+  background-clip: border-box;
+  color : #FFF;
+  font-weight: normal;
+}
+
+/*#page1>#savoirplus::after {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  background: none;
+  border: 5px solid #FFF;
+}*/
+
+/*----PAGE 2----*/
 
 #page2 {
   background-image : url(img/maquette2.png);
+}
+
+#page2>.fakebutton {
+  right : 154px;
 }
 
 #page3 {
   background-image : url(img/maquette3.png);
 }
 
+#page3>.fakebutton {
+  right : 132px;
+}
+
 #page4 {
   background-image : url(img/maquette4.png);
+}
+
+#page4>.fakebutton {
+  right : 110px;
 }
 
 #page5 {
   background-image : url(img/maquette5.png);
 }
 
+#page5>.fakebutton {
+  right : 88px;
+}
+
 #page6 {
   background-image : url(img/maquette6.png);
 }
 
+#page6>.fakebutton {
+  right : 66px;
+}
+
 #page7 {
   background-image : url(img/maquette7.png);
+}
+
+#page7>.fakebutton {
+  right : 44px;
 }
