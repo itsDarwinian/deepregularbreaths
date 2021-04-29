@@ -65,6 +65,11 @@ var ScrollDetector = function()
 
 new ScrollDetector();
 
+var NumberofPages = 0;
+var CurrentPage = 1;
+var zI = 1100;
+var timeLocked = false
+
 /*PRELOADER*/
 //paste this code under the head tag or in a separate js file.
 	// Wait for window load
@@ -72,10 +77,13 @@ new ScrollDetector();
     var elements = document.querySelectorAll('.page');
     for(var i=0; i<elements.length; i++){
       elements[i].style.display = 'none';
+      elements[i].onwheel = specialScroll;
+      NumberofPages = NumberofPages + 1;
     }
 		// Animate loader off screen
-		$(".se-pre-con").fadeOut(1500);;
+		$(".se-pre-con").fadeOut(1500);
     document.getElementById('page1').style.display = 'block';
+    //console.log('nombre de pages : '+NumberofPages)
 
     /*document.getElementById('nav').onmouseout = function(event) {
       if (CurrentPage='page1'){
@@ -92,19 +100,50 @@ new ScrollDetector();
     }*/
 	});
 
-var CurrentPage = 1;
+function specialScroll(event) {
+  var DestPageNb;
+  event.preventDefault();
+  console.log(event.deltaY);
+
+  if (event.deltaY>0){//Scrolling down
+    DestPageNb = Math.min(CurrentPage + 1, NumberofPages);
+    //console.log('DestPageNb :'+DestPageNb);
+  }
+  else if (event.deltaY<0) {
+    DestPageNb = Math.max(CurrentPage - 1, 1);
+    //console.log('DestPageNb :'+DestPageNb);
+  }
+
+  movetoPage(DestPageNb);
+}
 
 function movetoPage(nb) {
-  if (nb!=CurrentPage) {
-    //console.log(n);
-    document.getElementById('page'+nb).style.display = 'block';
-    document.getElementById('page'+CurrentPage).style.display = 'none';
+  if (nb!=CurrentPage && !timeLocked){
+    //Pour l'instant, j'ai un problème si l'utilisateur décide de quitter une page et d'y revenir immédiatement.
+    var DestPage = document.getElementById('page'+nb)
+    DestPage.style.display = 'none';
+    void DestPage.offsetWidth; // trigger a DOM reflow (pour recharger les animations)
+    //document.getElementById('page'+CurrentPage).style.zIndex = '1000';
+    DestPage.style.display = 'block';
+    zI = zI + 1;
+    DestPage.style.zIndex = zI;
+    //console.log('page'+nb);
 
-    document.getElementById('b'+nb).style.backgroundPosition='-17px';
-    document.getElementById('b'+CurrentPage).style.backgroundPosition='5px';
+    timeLocked = true;
+    setTimeout(function(){ timeLocked = false; }, 400);
+
+    var BlockerPos = 0 - 1 + (22*nb);
+    BlockerPos = BlockerPos.toString();
+    document.getElementById('bblock').style.left = BlockerPos+'px';
+    //document.getElementById('b'+nb).style.backgroundPosition='-17px';
+    //document.getElementById('b'+CurrentPage).style.backgroundPosition='5px';
 
     CurrentPage = nb;
+    //DestPage.onwheel = specialScroll;
+    //Déplacé à l'init
     document.getElementById('nav').style.opacity=100;
 
+    //À mettre après la fin de l'animation (timer 800 ?)
+    //document.getElementById('page'+CurrentPage).style.display = 'none';
   }
 }
