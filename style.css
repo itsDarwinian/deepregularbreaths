@@ -543,12 +543,91 @@ h2 {
 }
 
 #page2>.content {
-  width : 580px;
+  width : 620px;
   position : fixed;
   top : 46%;
   left : 44%;
   transform: translate(-50%, -50%);
 }
+
+#page2>.content>#infobar {
+  width : 164px;
+  float : left;
+  margin-right: 15px;
+  margin-top: -9px;
+}
+
+#page2>.content>#infobar>div {
+  height : 48px;
+  width : 158px;
+  font-weight: bold;
+  border: solid #FFFFFF00 3px;
+  border-radius: 10px;
+  margin-bottom: 2px;
+  /*text-align: center;*/
+}
+
+#page2>.content>#infobar>div>img {
+  float: left;
+  margin : 8px 16px 8px 9px;
+}
+
+#page2>.content>#infobar>div>p {
+  margin-top: 12px;
+}
+
+#page2>.content>#infobar>div>.infotooltip {
+  display:none;
+}
+
+#page2>.content>#infobar>div>.infotooltip>p {
+  padding-top: 14px;
+  color: #333;
+  font-size: 12pt;
+  font-weight: normal;
+  text-align: center;
+}
+
+#page2>.content>#infobar>div>.infotooltip>p::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: #333;
+}
+
+#page2>.content>#infobar>div>.infotooltip>p::selection {
+  color: white;
+  background: #333;
+}
+
+#page2>.content>#infobar>div:hover>img {
+  display:none;
+}
+
+#page2>.content>#infobar>div:hover>p {
+  display:none;
+}
+
+#page2>.content>#infobar>div:hover {
+  border: solid #FFFFFF 3px;
+}
+
+#page2>.content>#infobar>div:hover>.infotooltip {
+  display:block;
+  background-color: white;
+  height: 100%;
+  -webkit-animation: 0.25s ease-in 0s circleZoomIn;
+          animation: 0.25s ease-in 0s circleZoomIn;
+}
+
+@-webkit-keyframes circleZoomIn {
+  0% {clip-path: circle(0% at 50% 50%)}
+  100% {clip-path: circle(70.7% at 50% 50%)}
+}
+@keyframes circleZoomIn {
+  0% {clip-path: circle(0% at 50% 50%)}
+  100% {clip-path: circle(70.7% at 50% 50%)}
+}
+
+/*----PAGE3----*/
 
 #page3 {
   background: rgb(24,24,24);

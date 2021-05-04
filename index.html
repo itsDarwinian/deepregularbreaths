@@ -5,7 +5,8 @@
   <title>Deep Regular Breaths</title>
   <meta name="description" content="Deep Regular Breaths est un jeu de société qui mélange deckbuilding et identité secrète. Et il est en cours de développement.">
   <meta name="google-site-verification" content="K7tmQWqFbvmQOv6kQJ1Tk6w3tDrDHAY520HZ_8x4es4" />
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" media='screen and (min-device-width: 701px)' href="style.css">
+  <link rel='stylesheet' media='screen and (max-device-width: 700px)' href='mobile.css' />
   <link rel="icon" href="img/favicon.ico" />
   <link rel="icon" type="image/png" href="img/favicon.png" />
   <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">-->
@@ -46,7 +47,21 @@
         <h2>Bienvenue à bord</h2>
         <img src="img/2separator.png"/>
       </div>
-      <p>Deep Regular Breaths est un jeu de société (4 à 8 joueurs) qui mélange deckbuilding et identité secrète. Parviendrez-vous à achever l’enquête sur la panne du vaisseau ou bien succomberez vous à l’épuisement de l’oxygène... Ou encore aux machinations de vos “coéquipiers” ?</p>
+      <div id="infobar">
+        <div>
+          <img src="img/durationicon.png" alt="durée"/><p>60 - 90"</p>
+          <div class="infotooltip"><p>60 à 90 minutes</p></div>
+        </div>
+        <div>
+          <img src="img/playersicon.png" alt="joueurs"/><p>4 - 8</p>
+          <div class="infotooltip"><p>4 à 8 joueurs</p></div>
+        </div>
+        <div>
+          <img src="img/ageicon.png" alt="âge"/><p>14+</p>
+          <div class="infotooltip"><p>14 ans et plus</p></div>
+        </div>
+      </div>
+      <p>Deep Regular Breaths est un jeu de société qui mélange deckbuilding et identité secrète. Parviendrez-vous à achever l’enquête sur la panne du vaisseau ou bien succomberez vous à l’épuisement de l’oxygène... Ou encore aux machinations de vos “coéquipiers” ?</p>
     </div>
   </div>
   <div class="page" id="page3">
@@ -94,7 +109,7 @@
     <div class="content">
       <div class="titlediv">
         <img src="img/6separator.png"/>
-        <h2>Et c'est tout !</h2>
+        <h2>Et c'est tout&nbsp;!</h2>
         <img src="img/6separator.png"/>
       </div>
       <p>Nous avons pour objectif de créer un jeu de société dans lequel la planification et la stratégie sont récompensées, un jeu dans lequel les synergies et les options sont nombreuses, mais sans le prix et le temps de mise en place des grands jeux de stratégie habituels.</p>

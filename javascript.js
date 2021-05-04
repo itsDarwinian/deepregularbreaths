@@ -77,7 +77,9 @@ var timeLocked = false
     var elements = document.querySelectorAll('.page');
     for(var i=0; i<elements.length; i++){
       elements[i].style.display = 'none';
-      elements[i].onwheel = specialScroll;
+      elements[i].onwheel = specialScroll;//listener pour le desktop scroll
+      elements[i].addEventListener("touchstart", specialTouchScrollSetup, false);
+      elements[i].addEventListener("touchend", specialTouchScroll, false);
       NumberofPages = NumberofPages + 1;
     }
 		// Animate loader off screen
@@ -102,8 +104,8 @@ var timeLocked = false
 
 function specialScroll(event) {
   var DestPageNb;
-  event.preventDefault();
-  console.log(event.deltaY);
+  //event.preventDefault();
+  //console.log(event.deltaY);
 
   if (event.deltaY>0){//Scrolling down
     DestPageNb = Math.min(CurrentPage + 1, NumberofPages);
@@ -113,6 +115,32 @@ function specialScroll(event) {
     DestPageNb = Math.max(CurrentPage - 1, 1);
     //console.log('DestPageNb :'+DestPageNb);
   }
+
+  movetoPage(DestPageNb);
+}
+
+var TouchDeltaY;
+
+function specialTouchScrollSetup(event) {
+  TouchDeltaY = event.changedTouches[0].screenY;
+}
+
+function specialTouchScroll(event) {
+  var DestPageNb;
+  //event.preventDefault();
+  //console.log(event.changedTouches[0].screenY);
+
+  if (event.changedTouches[0].screenY>TouchDeltaY){//Scrolling down
+    DestPageNb = Math.min(CurrentPage + 1, NumberofPages);
+  }
+  else if (event.changedTouches[0].screenY<TouchDeltaY) {
+    DestPageNb = Math.max(CurrentPage - 1, 1);
+  }
+  else {
+    return
+  }
+
+  TouchDeltaY = event.changedTouches[0].screenY
 
   movetoPage(DestPageNb);
 }
