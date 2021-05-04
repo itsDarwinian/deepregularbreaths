@@ -130,10 +130,10 @@ function specialTouchScroll(event) {
   //event.preventDefault();
   //console.log(event.changedTouches[0].screenY);
 
-  if (event.changedTouches[0].screenY>TouchDeltaY){//Scrolling down
+  if (event.changedTouches[0].screenY<TouchDeltaY){//Scrolling down
     DestPageNb = Math.min(CurrentPage + 1, NumberofPages);
   }
-  else if (event.changedTouches[0].screenY<TouchDeltaY) {
+  else if (event.changedTouches[0].screenY>TouchDeltaY) {
     DestPageNb = Math.max(CurrentPage - 1, 1);
   }
   else {

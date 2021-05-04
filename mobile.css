@@ -208,6 +208,7 @@ body {
   background-color: #1e0738;
   background-attachment: fixed;
   height : 100%;
+  overscroll-behavior: none;
 }
 
 #preview {
@@ -341,6 +342,7 @@ body {
 }
 
 .page {
+  overscroll-behavior: none;
   position: fixed;
 	left: 0px;
 	top: 0px;
@@ -571,7 +573,7 @@ h2 {
 #page2>.content>#infobar>div {
   float : left;
   height : 48px;
-  width : 158px;
+  width : 31%;
   font-weight: bold;
   border: solid #FFFFFF00 3px;
   border-radius: 10px;
@@ -581,7 +583,7 @@ h2 {
 
 #page2>.content>#infobar>div>img {
   float: left;
-  margin : 8px 16px 8px 9px;
+  margin : 8px 0px 8px 9px;
 }
 
 #page2>.content>#infobar>div>p {
@@ -768,7 +770,7 @@ h2 {
   right: 50%;
   transform: translate(50%, 0);
   overflow: hidden;
-  width : 95%;
+  width : 115%;
   pointer-events: none;
 }
 
