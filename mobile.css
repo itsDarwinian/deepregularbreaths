@@ -208,7 +208,7 @@ body {
   background-color: #1e0738;
   background-attachment: fixed;
   height : 100%;
-  overscroll-behavior: none;
+  overscroll-behavior: contain;
 }
 
 #preview {
@@ -342,7 +342,7 @@ body {
 }
 
 .page {
-  overscroll-behavior: none;
+  overscroll-behavior: contain;
   position: fixed;
 	left: 0px;
 	top: 0px;
