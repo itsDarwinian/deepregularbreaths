@@ -276,6 +276,12 @@ body {
 	height: 100%;
 	z-index: 9999;
 	background-color: #111;
+  opacity: 1;
+  transition: opacity ease-in-out 1.5s;
+}
+
+.se-pre-con.off {
+  opacity: 0;
 }
 
 #nav {
