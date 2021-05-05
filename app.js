@@ -138,6 +138,17 @@ const movetoPage = (nb, shouldChangeLocation) => {
   }
 };
 
+const flipCard = (element) => {
+  for(let i = 0; i < element.children.length; i++) {
+    face = element.children[i];
+    
+    if(face.classList.contains("face-invisible"))
+      face.classList.remove("face-invisible")
+    else
+      face.classList.add("face-invisible")
+  }
+}
+
 const onDocumentReady = () => {
   displayPage();
 };

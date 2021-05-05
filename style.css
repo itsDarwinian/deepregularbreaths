@@ -686,19 +686,39 @@ h2 {
   transform: translate(-50%, 300px);
 }
 
-#page4>.pageillustration>img {
-  /*height : 70%;*/
+#page4>.pageillustration>.card {
+  display: inline-block;
+  position: relative;
   margin-top: 50px;
   margin-right: 10px;
   margin-left: 10px;
+  width: 210px;
+  height: 298px;
   pointer-events: all;
   transition: transform 300ms ease-out;
   transform-origin: center bottom;
 }
 
-#page4>.pageillustration>img:hover {
+#page4>.pageillustration>.card:hover {
   transform: scale(1.12);
 }
+
+#page4>.pageillustration>.card img {
+  transition: transform 300ms ease-out;
+  transform-origin: center bottom;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* #page4>.pageillustration>.card img.face-visible {
+  transform: rotate3d(0, 1, 0, 0deg);
+} */
+
+#page4>.pageillustration>.card img.face-invisible {
+  transform: rotate3d(0, 1, 0, 90deg);
+}
+
 
 #page4>.backframe {
   position: fixed;
