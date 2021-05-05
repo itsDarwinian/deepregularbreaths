@@ -4,31 +4,32 @@
   <meta charset="utf-8">
   <title>Deep Regular Breaths</title>
   <meta name="description" content="Deep Regular Breaths est un jeu de société qui mélange deckbuilding et identité secrète. Et il est en cours de développement.">
-  <meta name="google-site-verification" content="K7tmQWqFbvmQOv6kQJ1Tk6w3tDrDHAY520HZ_8x4es4" />
+  <meta name="google-site-verification" content="K7tmQWqFbvmQOv6kQJ1Tk6w3tDrDHAY520HZ_8x4es4" >
   <meta name="viewport" content="width=device-width, initial-scale=0.7, maximum-scale=5.0, minimum-scale=0.7"><!--because mobile resolutions are weird-->
   <link rel="stylesheet" media='screen and (min-device-width: 701px)' href="style.css">
-  <link rel='stylesheet' media='screen and (max-device-width: 700px)' href='mobile.css' />
-  <link rel="icon" href="img/favicon.ico" />
-  <link rel="icon" type="image/png" href="img/favicon.png" />
+  <link rel='stylesheet' media='screen and (max-device-width: 700px)' href='mobile.css'>
+  <link rel="icon" href="img/favicon.ico">
+  <link rel="icon" type="image/png" href="img/favicon.png">
   <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">-->
   <script src="lib\jquery.min.js"></script>
   <script src="lib\parallax.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
-  <script type="text/javascript" src="javascript.js"></script>
+  <!-- <script type="text/javascript" src="javascript.js"></script> -->
+  <script type="application/javascript" src="app.js"></script>
 </head>
 <body>
   <img id="preview" src="img/preview.png">
   <div class="se-pre-con"><div class="cssload-ball"></div></div>
 
   <div id="nav">
-    <button id="bblock"/>
-    <button id="b1" onclick="movetoPage(1)"/>
-    <button id="b2" onclick="movetoPage(2)"/>
-    <button id="b3" onclick="movetoPage(3)"/>
-    <button id="b4" onclick="movetoPage(4)"/>
-    <button id="b5" onclick="movetoPage(5)"/>
-    <button id="b6" onclick="movetoPage(6)"/>
-    <button id="b7" onclick="movetoPage(7)"/>
+    <button id="bblock">
+    <button id="b1" onclick="movetoPage(1, true)">
+    <button id="b2" onclick="movetoPage(2, true)">
+    <button id="b3" onclick="movetoPage(3, true)">
+    <button id="b4" onclick="movetoPage(4, true)">
+    <button id="b5" onclick="movetoPage(5, true)">
+    <button id="b6" onclick="movetoPage(6, true)">
+    <button id="b7" onclick="movetoPage(7, true)">
   </div>
 
   <div class="page" id="page1">
@@ -40,25 +41,25 @@
     </div>
   </div>
   <div class="page" id="page2">
-    <img class="backframe" src="img/backframe2.png"/>
-    <img class="pageillustration" src="img/2illus.png"/>
+    <img class="backframe" src="img/backframe2.png">
+    <img class="pageillustration" src="img/2illus.png">
     <div class="content">
       <div class="titlediv">
-        <img src="img/2separator.png"/>
+        <img src="img/2separator.png">
         <h2>Bienvenue à bord</h2>
-        <img src="img/2separator.png"/>
+        <img src="img/2separator.png">
       </div>
       <div id="infobar">
         <div>
-          <img src="img/durationicon.png" alt="durée"/><p>60 - 90"</p>
+          <img src="img/durationicon.png" alt="durée"><p>60 - 90"</p>
           <div class="infotooltip"><p>60 à 90 minutes</p></div>
         </div>
         <div>
-          <img src="img/playersicon.png" alt="joueurs"/><p>4 - 8</p>
+          <img src="img/playersicon.png" alt="joueurs"><p>4 - 8</p>
           <div class="infotooltip"><p>4 à 8 joueurs</p></div>
         </div>
         <div>
-          <img src="img/ageicon.png" alt="âge"/><p>14+</p>
+          <img src="img/ageicon.png" alt="âge"><p>14+</p>
           <div class="infotooltip"><p>14 ans et plus</p></div>
         </div>
       </div>
@@ -66,52 +67,69 @@
     </div>
   </div>
   <div class="page" id="page3">
-    <img class="backframe" src="img/backframe3.png"/>
-    <img class="pageillustration" src="img/3illus.png"/>
+    <img class="backframe" src="img/backframe3.png">
+    <img class="pageillustration" src="img/3illus.png">
     <div class="content">
       <h3 class="mattype">cartes</h3>
       <div class="titlediv">
-        <img src="img/3separator.png"/>
+        <img src="img/3separator.png">
         <h2>Salles</h2>
-        <img src="img/3separator.png"/>
+        <img src="img/3separator.png">
       </div>
       <p>Les astronautes doivent composer avec soin leurs expéditions dans le vaisseau pour essayer de profiter au maximum des ressources et effets des salles. Toujours plus désorientés au fil de leur enquête, ils ajoutent de nouvelles salles à leurs expéditions et en retirent d’autres.</p>
     </div>
   </div>
   <div class="page" id="page4">
-    <img class="backframe" src="img/backframe4.png"/>
-    <div class="pageillustration"> <img src="img/4card1.png"/><img src="img/4card2.png"/><img src="img/4card3.png"/><img src="img/4card4.png"/></div>
+    <img class="backframe" src="img/backframe4.png">
+    <div class="pageillustration">
+      <div class="card" onclick="flipCard(this)">
+        <img src="img/4card1.png">
+        <img src="img/4card1.png" class="face-invisible">
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <img src="img/4card2.png">
+        <img src="img/4card2.png" class="face-invisible">
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <img src="img/4card3.png">
+        <img src="img/4card3.png" class="face-invisible">
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <img src="img/4card4.png">
+        <img src="img/4card4.png" class="face-invisible">
+      </div>
+    </div>
     <div class="content">
       <h3 class="mattype">cartes</h3>
       <div class="titlediv">
-        <img src="img/4separator.png"/>
-        <h2>Capacités<br/>afflictions</h2>
-        <img src="img/4separator.png"/>
+        <img src="img/4separator.png">
+        <h2>Capacités<br>afflictions</h2>
+        <img src="img/4separator.png">
       </div>
       <p>Alors qu’ils parcourent le vaisseau, les astronautes développent de nouvelles afflictions qui changent les limites de leurs actions. Lorsqu’ils parviennent à se débarasser d’une affliction, celle-ci devient alors une nouvelle capacité à utiliser.</p>
     </div>
   </div>
   <div class="page" id="page5">
-    <img class="backframe" src="img/backframe5.png"/>
-    <img class="pageillustration" src="img/5illus.png"/>
+    <img class="backframe" src="img/backframe5.png">
+    <img class="pageillustration" src="img/5illus.png">
     <div class="content">
       <h3 class="mattype">cartes</h3>
       <div class="titlediv">
-        <img src="img/5separator.png"/>
+        <img src="img/5separator.png">
         <h2>Secrets</h2>
-        <img src="img/5separator.png"/>
+        <img src="img/5separator.png">
       </div>
       <p>Chaque astronaute a un objectif secret. Soit <span style="color:#8bbdeb">motivation</span>, soit <span style="color:#ec5959">obsession</span>, cette carte détermine s’il joue avec ou contre les autres joueurs, en plus de lui donner un “plein potentiel” unique.</p>
     </div>
   </div>
   <div class="page" id="page6">
-    <img class="backframe" src="img/backframe6.png"/>
-    <img class="pageillustration" src="img/6illus.png"/>
+    <img class="backframe" src="img/backframe6.png">
+    <img class="pageillustration" src="img/6illus.png">
     <div class="content">
       <div class="titlediv">
-        <img src="img/6separator.png"/>
+        <img src="img/6separator.png">
         <h2>Et c'est tout&nbsp;!</h2>
-        <img src="img/6separator.png"/>
+        <img src="img/6separator.png">
       </div>
       <p>Nous avons pour objectif de créer un jeu de société dans lequel la planification et la stratégie sont récompensées, un jeu dans lequel les synergies et les options sont nombreuses, mais sans le prix et le temps de mise en place des grands jeux de stratégie habituels.</p>
     </div>

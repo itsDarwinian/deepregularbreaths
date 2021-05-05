@@ -276,6 +276,12 @@ body {
 	height: 100%;
 	z-index: 9999;
 	background-color: #111;
+  opacity: 1;
+  transition: opacity ease-in-out 1.5s;
+}
+
+.se-pre-con.off {
+  opacity: 0;
 }
 
 #nav {
@@ -681,11 +687,14 @@ h2 {
   transform: translate(-50%, 300px);
 }
 
-#page4>.pageillustration>img {
-  /*height : 70%;*/
+#page4>.pageillustration>.card {
+  display: inline-block;
+  position: relative;
   margin-top: 50px;
   margin-right: 7px;
   margin-left: 7px;
+  width: 210px;
+  height: 298px;
   pointer-events: all;
   transition: transform 300ms ease-out;
   transform-origin: center bottom;
@@ -693,10 +702,26 @@ h2 {
   border-radius: 19px;
 }
 
-#page4>.pageillustration>img:hover {
-  transform: scale(1.08);
-  border: solid white 3px;
+#page4>.pageillustration>.card:hover {
+  transform: scale(1.12);
 }
+
+#page4>.pageillustration>.card img {
+  transition: transform 300ms ease-out;
+  transform-origin: center bottom;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* #page4>.pageillustration>.card img.face-visible {
+  transform: rotate3d(0, 1, 0, 0deg);
+} */
+
+#page4>.pageillustration>.card img.face-invisible {
+  transform: rotate3d(0, 1, 0, 90deg);
+}
+
 
 #page4>.backframe {
   position: fixed;
