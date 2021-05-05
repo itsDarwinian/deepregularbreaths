@@ -673,6 +673,7 @@ h2 {
   left: 50%;
   width : 100%;
   height : 350px;
+  padding-bottom: 4px;
   vertical-align: bottom;
   text-align: center;
   overflow: hidden;
@@ -683,15 +684,18 @@ h2 {
 #page4>.pageillustration>img {
   /*height : 70%;*/
   margin-top: 50px;
-  margin-right: 10px;
-  margin-left: 10px;
+  margin-right: 7px;
+  margin-left: 7px;
   pointer-events: all;
   transition: transform 300ms ease-out;
   transform-origin: center bottom;
+  border: solid #FFFFFF00 3px;
+  border-radius: 19px;
 }
 
 #page4>.pageillustration>img:hover {
-  transform: scale(1.12);
+  transform: scale(1.08);
+  border: solid white 3px;
 }
 
 #page4>.backframe {
@@ -719,10 +723,12 @@ h2 {
 
 #page5>.pageillustration {
   position: fixed;
-  top : 10%;
-  right: 56%;
+  bottom : 40%;
+  right: 62%;
   overflow: hidden;
-  height : 68%;
+  width: 26%;
+  transform: translate(20%, 20%);
+  /*height : 68%;*/
   pointer-events: none;
 }
 

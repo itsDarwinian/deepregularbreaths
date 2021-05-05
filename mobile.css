@@ -391,8 +391,9 @@ h2 {
   width : 85%;
   position : fixed;
   right: 50%;
-  transform: translate(50%, 0);
-  margin-top: 150px;
+  top: 10%;
+  transform: translate(50%, 100px);
+  /*margin-top: 150px;*/
   text-align: justify;
   -webkit-animation: 1.2s linear 0s fadeIn;
           animation: 1.2s linear 0s fadeIn;
@@ -409,6 +410,7 @@ h2 {
 }
 
 .backframe {
+  display:none;
   position: fixed;
   top : 10%;
   right : 50%;
@@ -573,7 +575,7 @@ h2 {
 #page2>.content>#infobar>div {
   float : left;
   height : 48px;
-  width : 30%;
+  width : 31%;
   font-weight: bold;
   border: solid #FFFFFF00 3px;
   border-radius: 10px;
@@ -687,6 +689,7 @@ h2 {
   left: 50%;
   width : 100%;
   height : 350px;
+  padding-bottom: 4px;
   vertical-align: bottom;
   text-align: center;
   overflow: hidden;
@@ -697,15 +700,18 @@ h2 {
 #page4>.pageillustration>img {
   /*height : 70%;*/
   margin-top: 50px;
-  margin-right: 10px;
-  margin-left: 10px;
+  margin-right: 7px;
+  margin-left: 7px;
   pointer-events: all;
   transition: transform 300ms ease-out;
   transform-origin: center bottom;
+  border: solid #FFFFFF00 3px;
+  border-radius: 19px;
 }
 
 #page4>.pageillustration>img:hover {
-  transform: scale(1.12);
+  transform: scale(1.08);
+  border: solid white 3px;
 }
 
 /*#page4>.backframe {
