@@ -698,20 +698,25 @@ h2 {
   pointer-events: all;
   transition: transform 300ms ease-out;
   transform-origin: center bottom;
-  border: solid #FFFFFF00 3px;
-  border-radius: 19px;
+  transform-style: preserve-3d;
 }
 
 #page4>.pageillustration>.card:hover {
-  transform: scale(1.12);
+  transform: scale(1.08);
 }
 
 #page4>.pageillustration>.card img {
-  transition: transform 300ms ease-out;
+  width: 210px;
+  height: 298px;
+  transition: transform 500ms ease-out;
   transform-origin: center bottom;
   position: absolute;
   top: 0;
   left: 0;
+  border: solid #FFFFFF00 3px;
+  border-radius: 19px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 /* #page4>.pageillustration>.card img.face-visible {
@@ -719,7 +724,11 @@ h2 {
 } */
 
 #page4>.pageillustration>.card img.face-invisible {
-  transform: rotate3d(0, 1, 0, 90deg);
+  transform: rotateY(180deg);
+}
+
+#page4>.pageillustration>.card img:hover {
+  border: solid #FFFFFF 3px;
 }
 
 
