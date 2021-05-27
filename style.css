@@ -762,9 +762,15 @@ h2 {
   overflow: hidden;
   width: 26%;
   transform: translate(20%, 20%);
+  transition: transform 2s ease-out;
+  backface-visibility: hidden;
   /*height : 68%;*/
-  pointer-events: none;
+  pointer-events: none;/*!!DONT FORGET : CHANGE THAT TO ENABLE INTERACTIONS*/
 }
+
+/*#page5>.pageillustration:hover {
+  transform: translate(20%, 20%) rotateY(180deg);
+}*/
 
 #page5>.backframe {
   position: fixed;

@@ -101,10 +101,10 @@ const onHistoryChange = () => {
 
 const movetoPage = (nb, shouldChangeLocation) => {
   if (nb != currentPage && !timeLocked) {
-    if (shouldChangeLocation && nb >= 1 && nb <= routes.length) {
+    /*if (shouldChangeLocation && nb >= 1 && nb <= routes.length) {
       console.log(nb);
       window.location.hash = routesByPageNb[nb - 1].hash;
-    }
+    }*/
 
     //Pour l'instant, j'ai un problème si l'utilisateur décide de quitter une page et d'y revenir immédiatement.
     var destPage = document.getElementById("page" + nb);
@@ -141,7 +141,7 @@ const movetoPage = (nb, shouldChangeLocation) => {
 const flipCard = (element) => {
   for(let i = 0; i < element.children.length; i++) {
     face = element.children[i];
-    
+
     if(face.classList.contains("face-invisible"))
       face.classList.remove("face-invisible")
     else
